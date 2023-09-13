@@ -11,22 +11,24 @@
         <input id="item-input" type="text" placeholder="Enter a item" 
         class="border-2 px-4 py-2 w-96 rounded-md shadow-md">
 
-        <div class="flex justify-center">
+        <div class="flex justify-center gap-4">
             <button type="submit" id="add-item" 
             class="bg-blue-600 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded-md">
                 Add
+            </button>
+            <button type="submit" id="edit-item" 
+            class="bg-orange-500 hidden hover:bg-orange-700 text-white font-bold px-4 py-2 rounded-md">
+                Edit
+            </button>
+            <button type="submit" id="cencel-btn" 
+            class="bg-gray-500 hidden hover:bg-gray-700 text-white font-bold px-4 py-2 rounded-md">
+                Cancel
             </button>
         </div>
     </div>
 
     <div id="item-list" class="max-w-3xl w-full mx-auto mt-10 py-10 px-8 bg-gray-200 flex flex-col gap-5">
-        <!-- <div id="item" class="flex items-center justify-between w-full">
-            <span id="item-name" class="text-2xl font-medium"></span>
-            <div class="flex font-medium gap-4">
-                <span id="delete">Delete</span>
-                <span id="update">Update</span>
-            </div>
-        </div> -->
+
     </div>
 
     <script src="script.js"></script>
