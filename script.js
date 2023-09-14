@@ -23,7 +23,12 @@ function updateList(items){
     `
     }
     itemList.innerHTML = listHtml;
+    storeInLocalStorage();
 } 
+
+function storeInLocalStorage(){
+    localStorage.setItem("itemHistory", JSON.stringify(itemHistory));
+}
 
 function addItem(){
     const itemInput = document.getElementById("item-input");
@@ -140,4 +145,14 @@ function registerEvents(){
     itemList.addEventListener("click", processAction);
     cancelBtn.addEventListener("click", editCancel);
 }
+
+function populateFromLocalStorage(){
+    const items = JSON.parse(localStorage.getItem("itemHistory"));
+    
+    itemHistory = [...items]
+
+    updateList(items);
+}
+
+populateFromLocalStorage();
 registerEvents();
