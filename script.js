@@ -32,8 +32,12 @@ function storeInLocalStorage(){
 
 function addItem(){
     const itemInput = document.getElementById("item-input");
-    if(!itemInput)return;
+
     const itemName = itemInput.value;
+    if(itemName.length === 0){
+        alert("Write At list 1 character");
+        return;
+    }
     let item={}
     item = {type: "name",
             itemname: itemName
@@ -55,7 +59,10 @@ function updateItem(e){
     const selectItem = itemHistory.find(item => item.id === id);
     
     const editValue = itemname.value;
-
+    if(editValue.length === 0){
+        alert("Write At list 1 character");
+        return;
+    }
     selectItem.itemname = editValue;
 
     const selectItemIdx = itemHistory.findIndex(item=> item.id === id);
