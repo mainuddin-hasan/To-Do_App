@@ -12,7 +12,7 @@ function updateList(items){
     let listHtml = "";
 
     for(let item of items){
-        listHtml +=  `
+        listHtml += `
         <div id="item-${item.id}" class="flex items-center justify-between w-full">
         <span id="item-name" class="text-2xl font-medium">${item.itemname}</span>
         <div class="flex font-medium gap-4">
@@ -106,7 +106,7 @@ function editItem(item){
 
 function editCancel(){
     const addBtn = document.getElementById("add-item");
-    const cancelBtn = document.getElementById("cencel-btn");
+    const cancelBtn = document.getElementById("cancel-btn");
     const editBtn = document.getElementById("edit-item");
 
     editBtn.classList.add("hidden");
@@ -133,7 +133,7 @@ function registerEvents(){
     const addBtn = document.getElementById("add-item");
     const itemList = document.getElementById("item-list");
     const editBtn = document.getElementById("edit-item");
-    const cancelBtn = document.getElementById("cencel-btn");
+    const cancelBtn = document.getElementById("cancel-btn");
 
     addBtn.addEventListener("click", addItem);
     editBtn.addEventListener("click", updateItem);
